@@ -1,21 +1,7 @@
 import numpy as np
 import pandas as pd
 
-
-def euclidean(x: np.ndarray, y: np.ndarray):
-    return np.sum((x - y) ** 2) ** 0.5
-
-
-def manhattan(x: np.ndarray, y: np.ndarray):
-    return np.sum(np.abs(x - y))
-
-
-def chebyshev(x: np.ndarray, y: np.ndarray):
-    return np.max(np.abs(x - y))
-
-
-def cosine(x: np.ndarray, y: np.ndarray):
-    return 1 - (x @ y) / (np.linalg.norm(x) * np.linalg.norm(y))
+from functional import euclidean, manhattan, chebyshev, cosine
 
 
 class MyKNNClf:
